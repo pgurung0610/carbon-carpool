@@ -1,32 +1,21 @@
 import React from "react";
+import './CreateEvent.css';
 
 function CreateEvent() {
   return (
-    <div className="Login">
+    <div className="CreateEvent">
       Name of Event: &nbsp;
       <input type="text" />
-      <text>
-        {" "}
-        <br />{" "}
-      </text>
+        <br />
       Date: &nbsp;
       <input type="text" />
-      <text>
-        {" "}
-        <br />{" "}
-      </text>
+        <br />
       Time: &nbsp;
       <input type="text" />
-      <text>
-        {" "}
-        <br />{" "}
-      </text>
+        <br />
       Location: &nbsp;
       <input type="text" />
-      <text>
-        {" "}
-        <br />{" "}
-      </text>
+        <br />
       <button>Create</button>{" "}
     </div>
   );

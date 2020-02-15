@@ -36,7 +36,7 @@ class Feed extends React.Component {
         UsersInfoService.retrieveAllCourses()//HARDCODED
             .then(
                 response => {
-                    console.log(response);
+                    console.log(response.data);
                 }
             )
     }
@@ -44,11 +44,11 @@ class Feed extends React.Component {
     render() {
         return (
             <div className="Feed">
-                <ul className="posts">
+                {/* <ul className="posts">
                     {this.state.posts.map( post => (
                         <Post key={post.id} post={post} />
                     ))}
-                </ul>
+                </ul> */}
             </div>
           );
     }
