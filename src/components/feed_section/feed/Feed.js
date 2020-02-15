@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post'
+import UsersInfoService from '../../../service/UsersInfoService';
 
 class Feed extends React.Component {
     state = {
@@ -21,6 +22,24 @@ class Feed extends React.Component {
             }
         ]
     };
+
+    constructor(props) {
+        super(props)
+        this.refreshUsers = this.refreshUsers.bind(this)
+    }
+
+    componentDidMount() {
+        this.refreshUsers();
+    }
+
+    refreshUsers() {
+        UsersInfoService.retrieveAllCourses()//HARDCODED
+            .then(
+                response => {
+                    console.log(response);
+                }
+            )
+    }
 
     render() {
         return (
