@@ -1,7 +1,7 @@
-import React from 'react';
-import './App.css';
-import Login from './components/Login.js'
-import Home from './components/Home.js'
+import React from "react";
+import "./App.css";
+import Login from "./components/Login.js";
+import Home from "./components/Home.js";
 
 function App() {
   return (
