@@ -14,14 +14,14 @@ const toolbar = props => (
       </div>
       <div className="spacer" />
       <div className="toolbar_navigation-items">
-        <ul>
+        {/* <ul>
           <li>
             <a href="/">Home</a>
           </li>
           <li>
             <a href="/">Useres</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   </header>

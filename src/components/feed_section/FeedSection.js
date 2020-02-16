@@ -4,6 +4,7 @@ import Feed from "./feed/Feed";
 import Toolbar from "../Toolbar/Toolbar";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
+import "./FeedSection.css";
 
 class FeedSection extends React.Component {
   state = {
@@ -34,9 +35,19 @@ class FeedSection extends React.Component {
         {sideDrawer}
         {backdrop}
         <main style={{ marginTop: "64px" }}>
-          <p>This is the page content!</p>
+          {/* <p>This is the page content!</p> */}
         </main>
-
+        <ul id="topNavBar">
+          <li className="topNavBarOption">
+            <button id="global">Global Feed</button>
+          </li>
+          <li className="topNavBarOption">
+            <button id="feed">Feed</button>
+          </li>
+          <li className="topNavBarOption">
+            <button id="personal">Personal Events</button>
+          </li>
+        </ul>
         <Feed />
       </div>
     );
