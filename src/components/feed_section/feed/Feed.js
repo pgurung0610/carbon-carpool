@@ -36,6 +36,12 @@ function Feed() {
     }, []); 
 
     console.log(events);
+
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            console.log(position)
+        });
+    }
         
     return (
         <div className="Feed">
