@@ -39,32 +39,40 @@ function CreateEvent() {
 
   return (
     <div>
-    <div>
-      <form className="CreateEvent" onSubmit={createAnEvent.bind(this)}>
-        Name of Event:
-        <input id="name" type="text" placeholder="Name of event"/>
-          <br />
-        Date:
-        <input id="date" type="text" placeholder="mm/dd/yyyy"/>
-          <br />
-        Time:
-        <input id="time" type="text" placeholder="hh:mm"/>
-          <br />
-        Location:
-        <input id="location" type="text" placeholder="Location"/>
-          <br />
-        <input type="submit"></input>
-      </form>
-    </div>
-
-    <div id="success">
-      <div id="successMessage">Successfully Created Event!</div>
       <div>
-        <Link to="/home/">
-          <button>Return to Feed</button>
-        </Link>
+        <form className="CreateEvent" onSubmit={createAnEvent.bind(this)}>
+          <div id="success">
+            <div id="successMessage">Successfully Created Event!</div>
+            <div>
+              <Link to="/home/">
+                <button>Return to Feed</button>
+              </Link>
+            </div>
+          </div>
+      
+          <div className="eventField">
+            Name of Event:
+            <input id="name" type="text" placeholder="Name of event"/>
+            <br />
+          </div>
+          <div className="eventField">
+            Date:
+            <input id="date" type="text" placeholder="mm/dd/yyyy"/>
+            <br />
+          </div>
+          <div className="eventField">
+            Time:
+            <input id="time" type="text" placeholder="hh:mm"/>
+            <br />
+          </div>
+          <div className="eventField">
+            Location:
+            <input id="location" type="text" placeholder="Location"/>
+            <br />
+          </div>
+          <input type="submit"></input>
+        </form>
       </div>
-    </div>
     </div>
   );
 }

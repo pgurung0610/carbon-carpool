@@ -1,8 +1,10 @@
-.inLine {
-  display: inline;
+#TopNav {
+    justify-content: center;
 }
 
-ul {
+#topNavBar {
+  display: flex;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -10,6 +12,8 @@ ul {
   background-color: #f1e2e2;
 }
 
-li {
-  float: left;
+.topNavBarOption {
+  font-size: 100%;
+  border-color: black;
+  border-width: 5px;
 }

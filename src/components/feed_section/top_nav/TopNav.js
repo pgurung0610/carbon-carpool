@@ -7,7 +7,7 @@ function TopNav() {
       <ul id="topNavBar">
         <li className="topNavBarOption">
           <button id='global'>
-            Global Feed
+            Global
           </button>
         </li>
         <li className="topNavBarOption">
@@ -17,7 +17,7 @@ function TopNav() {
         </li>
         <li className="topNavBarOption">
           <button id='personal'>
-            Personal Transactions
+            Personal
           </button>
         </li>
       </ul>

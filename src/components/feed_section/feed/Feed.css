@@ -1,0 +1,9 @@
+.Feed {
+    display: flex;
+    justify-content: center;
+}
+
+Post {
+    align-items: center;
+}
+

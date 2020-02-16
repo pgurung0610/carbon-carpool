@@ -1,4 +1,19 @@
+#innerRect {
+  margin-bottom: 5%;
+  width: 100%;
+  min-height: 40%;
+  background: turquoise;
+  z-index: inherit;
+}
+
+#hiddenText {
+  visibility: hidden;
+}
+
 .topNavBar {
-  /* align-buttons: center; */
   display: flex;
+}
+
+#FeedSection {
+  justify-content: center;
 }

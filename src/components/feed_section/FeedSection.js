@@ -31,27 +31,32 @@ class FeedSection extends React.Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
     return (
-      <div style={{ height: "100%" }}>
+      <div id="FeedSection" style={{ height: "100%" }}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         {sideDrawer}
         {backdrop}
         <main style={{ marginTop: "64px" }}>
           {/* <p>This is the page content!</p> */}
         </main>
+        <div id="innerRect">
+          {/* <div id="rect"> */}
+            <text id="hiddenText">Hello</text>
+          {/* </div> */}
+        </div>
         <ul id="topNavBar">
           <li className="topNavBarOption">
             <Link to="/global">
-              <button id="global">Global Feed</button>
+              <button id="global">Global</button>
             </Link>
           </li>
           <li className="topNavBarOption">
             <button id="feed">Feed</button>
           </li>
           <li className="topNavBarOption">
-            <button id="personal">Personal Events</button>
+            <button id="personal">Personal</button>
           </li>
         </ul>
-        <Feed />
+        <Feed id="Feed"/>
       </div>
     );
   }

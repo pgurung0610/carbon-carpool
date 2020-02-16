@@ -18,14 +18,13 @@ export default class Global extends React.Component {
         let coords = position.coords;
         this.map = L.map("map", {
           center: [coords.latitude, coords.longitude],
-          zoom: 15,
+          zoom: 18,
           zoomControl: false
         });
 
-        // alert(coords.latitude);
-
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           detectRetina: true,
+          minZoom: 5,
           maxZoom: 20,
           maxNativeZoom: 17
         }).addTo(this.map);
