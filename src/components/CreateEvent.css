@@ -7,3 +7,11 @@
   /* font-size: calc(10px + 2vmin); */
   color: white;
 }
+
+#success {
+  visibility: hidden;
+}
+
+#successMessage {
+  text-decoration-color: green;
+}
