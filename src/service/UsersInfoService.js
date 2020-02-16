@@ -6,7 +6,7 @@ const USERS_API_URL = `${CARPOOL_API_URL}/users`
 
 class UsersInfoService {
 
-    retrieveAllCourses(name) {
+    retrieveAllUsers() {
         return axios.get(`${USERS_API_URL}`);
     }
 }

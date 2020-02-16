@@ -1,57 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import firebase from '../../../firebase'
 import Post from './Post'
 import UsersInfoService from '../../../service/UsersInfoService';
 
-class Feed extends React.Component {
-    state = {
-        posts: [
-            {
-                id: 1,
-                ride_provider: 'John Smith',
-                ride_getter: 'Holly Jones'
-            },
-            {
-                id: 2,
-                ride_provider: 'John Smith',
-                ride_getter: 'Holly Jones'
-            },
-            {
-                id: 3,
-                ride_provider: 'John Smith',
-                ride_getter: 'Holly Jones'
-            }
-        ]
-    };
+// function getUsers() {
+//     const[events, setEvents] = React.useState([]);
 
-    constructor(props) {
-        super(props)
-        this.refreshUsers = this.refreshUsers.bind(this)
-    }
+//         useEffect(() => {
+//             firebase.firestore().collection('users').onSnapshot((snapshot) => {
+//                 const users = snapshot.docs.map((doc) => ({
+//                     id: doc.id,
+//                     ...doc.data()
+//                 }));
 
-    componentDidMount() {
-        this.refreshUsers();
-    }
+//             setEvents(users);
+//         })
+//     }, []);
 
-    refreshUsers() {
-        UsersInfoService.retrieveAllCourses()//HARDCODED
-            .then(
-                response => {
-                    console.log(response.data);
-                }
-            )
-    }
+//     return users;
+            
+//     console.log(events);
+// }
 
-    render() {
-        return (
-            <div className="Feed">
-                {/* <ul className="posts">
-                    {this.state.posts.map( post => (
-                        <Post key={post.id} post={post} />
-                    ))}
-                </ul> */}
-            </div>
-          );
+
+function Feed() {
+    const[events, setEvents] = React.useState([]);
+    useEffect(() => {
+    const fetchData = async () => {
+      const db = firebase.firestore();
+      const data = await db.collection("event").get();
+      setEvents(data.docs.map(doc => ({...doc.data(), id: doc.id})));
     }
+        
+    fetchData();
+    }, []); 
+
+    console.log(events);
+        
+    return (
+        <div className="Feed">
+            <ul className="events">
+                {events.map( event => (
+                        <Post key={event.id} post={event} />
+                ))}
+            </ul>
+        </div>
+    );
 }
 
 export default Feed;

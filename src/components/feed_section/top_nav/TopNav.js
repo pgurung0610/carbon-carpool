@@ -4,18 +4,18 @@ import './TopNav.css'
 function TopNav() {
   return (
     <section className="TopNav">
-      <ul>
-        <li>
+      <ul id="topNavBar">
+        <li className="topNavBarOption">
           <button id='global'>
             Global Feed
           </button>
         </li>
-        <li>
+        <li className="topNavBarOption">
           <button id='feed'>
             Feed
           </button>
         </li>
-        <li>
+        <li className="topNavBarOption">
           <button id='personal'>
             Personal Transactions
           </button>

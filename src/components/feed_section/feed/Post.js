@@ -2,22 +2,14 @@ import React from "react";
 import "./Post.css";
 
 const Post = ({ post }) => {
-  const { id, ride_provider, ride_getter } = post;
+  const { id, name, date, time } = post;
 
   return (
     <li className="post">
-        <div className="post-description">
-          <section className="post-details">
-              <div className="movie-year">
-                <span className="title">Ride Provider:</span>
-                <span>{ride_provider}</span>
-              </div>
-              <div className="movie-year">
-                <span className="title">Ride Getter:</span>
-                <span>{ride_getter}</span>
-              </div>
-            </section>
-        </div>
+        <section className="post-description">
+            <span className="name">{name}</span> <br />
+            <span className="dateAndTime">{date}, {time}</span>
+        </section>
     </li>
   );
 };
