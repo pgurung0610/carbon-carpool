@@ -6,10 +6,12 @@ const Post = ({ post }) => {
 
   return (
     <li className="post">
-        <section className="post-description">
-            <span className="name">{name}</span> <br />
-            <span className="dateAndTime">{date}, {time}</span>
-        </section>
+      <section className="post-description">
+        <span className="name">{name}</span> <br />
+        <span className="dateAndTime">
+          {date}, {time}
+        </span>
+      </section>
     </li>
   );
 };
