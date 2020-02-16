@@ -1,10 +1,10 @@
-import React from 'react';
-import { HashRouter, Switch, Route } from "react-router-dom"
+import React from "react";
+import { HashRouter, Switch, Route } from "react-router-dom";
 // import firebase from './firebase'
-import './App.css';
-import Login from './components/Login.js'
-import Home from './components/Home.js'
-import CreateEvent from './components/CreateEvent.js'
+import "./App.css";
+import Login from "./components/Login.js";
+import Home from "./components/Home.js";
+import CreateEvent from "./components/CreateEvent.js";
 
 function App() {
   // const[events, setEvents] = React.useState([]);
@@ -14,18 +14,18 @@ function App() {
   //               const db = firebase.firestore();
   //               const data = await db.collection("users").get();
   //               setEvents(data.docs.map(doc => doc.data()));
-  //           }  
-        
+  //           }
+
   //           fetchData();
-  //       }, []); 
+  //       }, []);
 
   //       console.log(events);
 
   return (
-    <HashRouter basename='/'>
+    <HashRouter basename="/">
       <div className="App">
         <Switch>
-          <Route exact path='/' component={Login} />
+          <Route exact path="/" component={Login} />
           <Route path="/home/" component={Home} />
           <Route path="/createEvent/" component={CreateEvent} />
         </Switch>
