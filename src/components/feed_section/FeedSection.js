@@ -5,6 +5,7 @@ import Toolbar from "../Toolbar/Toolbar";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
 import "./FeedSection.css";
+import { Link } from "react-router-dom";
 
 class FeedSection extends React.Component {
   state = {
@@ -39,7 +40,9 @@ class FeedSection extends React.Component {
         </main>
         <ul id="topNavBar">
           <li className="topNavBarOption">
-            <button id="global">Global Feed</button>
+            <Link to="/global">
+              <button id="global">Global Feed</button>
+            </Link>
           </li>
           <li className="topNavBarOption">
             <button id="feed">Feed</button>

@@ -5,6 +5,7 @@ import "./App.css";
 import Login from "./components/Login.js";
 import Home from "./components/Home.js";
 import CreateEvent from "./components/CreateEvent.js";
+import Global from "./components/feed_section/global/Global";
 
 function App() {
   // const[events, setEvents] = React.useState([]);
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/" component={Login} />
           <Route path="/home/" component={Home} />
           <Route path="/createEvent/" component={CreateEvent} />
+          <Route path="/global/" component={Global} />
         </Switch>
       </div>
     </HashRouter>
